@@ -34,7 +34,7 @@ function render() {
     const span = document.createElement("span");
     span.textContent = task.text;
 
-    // ✅ Done button
+    //  Done button
     const doneBtn = document.createElement("button");
     doneBtn.textContent = "✅";
     doneBtn.className = "done-btn";
@@ -46,7 +46,7 @@ function render() {
       task.done = true;
       save();
 
-      // Sound + animation
+      // Sound
       ding.currentTime = 0;
       ding.play();
 
@@ -56,7 +56,7 @@ function render() {
       render();
     });
 
-    // ❌ Delete button
+    //  Delete button
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "❌";
     deleteBtn.className = "delete-btn";
@@ -77,3 +77,4 @@ function render() {
 function save() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
+
